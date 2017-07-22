@@ -6,6 +6,7 @@
 #include <map>
 #include <string>
 #include <iterator>
+#include <algorithm>
 
 
 /**
@@ -142,7 +143,7 @@ void Road::display() {
     }
     ostringstream oss;
     int i = s_min;
-    for(int lj = 0; lj < road.size(); lj++)
+    for(unsigned int lj = 0; lj < road.size(); lj++)
     {
         if(i%20 ==0)
     	{
@@ -161,7 +162,7 @@ void Road::display() {
     		oss << "      ";
     	}          
     	i++;
-    	for(int li = 0; li < road[0].size(); li++)
+    	for(unsigned int li = 0; li < road[0].size(); li++)
     	{
     		oss << "|" << road[lj][li];
     	}
